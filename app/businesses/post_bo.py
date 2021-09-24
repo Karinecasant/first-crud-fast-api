@@ -4,6 +4,7 @@ from datetime import datetime
 
 from app.domains import Post
 from app.repositories import PostRepository
+from app.repositories.schema import PostUpdateRepository
 
 from .schema import PostData, UpdatePostData
 
@@ -33,7 +34,13 @@ class PostBusiness:
         return post
 
     def update(self, post_id: str, newpost: UpdatePostData):
-        return self._post_repository.update(post_id, newpost.title, newpost.content, newpost.published_at)
+        update_object = PostUpdateRepository(
+            title=newpost.title, 
+            content=newpost.content,
+            published_at=newpost.published_at
+        )
+
+        return self._post_repository.update(post_id, update_object)
 
     def delete(self, post_id: str):
         return self._post_repository.delete(post_id)

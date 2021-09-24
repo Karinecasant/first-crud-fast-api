@@ -1,3 +1,4 @@
+from app.repositories.schema.post_schema import PostUpdateRepository
 from typing import List, Optional
 
 from app.domains import Post
@@ -27,11 +28,11 @@ class PostRepository:
         
         return False
 
-    def update(self, post_id:str, title: str, content: str, published_at: str):
+    def update(self, post_id:str, post_update_repository: PostUpdateRepository):
         if post := self.get_by_id(post_id):
-            post.title = title
-            post.content = content
-            post.published_at = published_at
+            post.title = post_update_repository.title
+            post.content = post_update_repository.content
+            post.published_at = post_update_repository.published_at
 
             return post
     

@@ -1,0 +1,2 @@
+from .post_schema import PostUpdateRepository
+from .comment_schema import CommentUpdateRepository

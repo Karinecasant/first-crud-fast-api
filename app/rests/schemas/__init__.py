@@ -1,1 +1,2 @@
 from .post_schema import CreatePostRequest
+from .comment_schema import CreateCommentRequest
