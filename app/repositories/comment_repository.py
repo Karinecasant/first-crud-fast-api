@@ -16,9 +16,12 @@ class CommentRepository:
         if len(found_comment) > 0:
             return found_comment[0]
 
+    def get_all(self):
+        return self._comment_database
+
     def create(self, comment: Comment):
         self._comment_database.append(comment)
-
+        
     def delete(self, comment_id: str):
         if comment := self.get_by_id(comment_id):   # faz a criação e verifica se é nulo
             self._comment_database.remove(comment)
