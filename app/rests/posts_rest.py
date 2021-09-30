@@ -2,7 +2,7 @@ from fastapi import APIRouter, status, HTTPException
 
 from app.rest_api import rest_api
 
-from app.businesses.schema import PostData, UpdatePostData
+from app.business.schema import PostData, UpdatePostData
 
 from .schemas import CreatePostRequest
 

@@ -25,8 +25,8 @@ class RestAPI:
         self.__post_repository = PostRepository(self.__database['posts'])
         self.__comment_repository = CommentRepository(self.__database['comments'])
 
-    def __initialize_businesses(self):
-        from .businesses import CommentBusiness, PostBusiness
+    def __initialize_business(self):
+        from .business import CommentBusiness, PostBusiness
 
         self.__post_business = PostBusiness(self.__post_repository)
         self.__comment_business = CommentBusiness(self.__comment_repository, self.__post_repository)
@@ -42,7 +42,7 @@ class RestAPI:
     def initialize(self):
         self.__initialize_database()
         self.__initialize_repositories()
-        self.__initialize_businesses()
+        self.__initialize_business()
         self.__initialize_rest_server()
 
         

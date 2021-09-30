@@ -2,7 +2,7 @@ from uuid import uuid4
 from typing import Optional
 from datetime import datetime
 
-from app.domains import Comment, comment
+from app.domains import Comment
 
 from app.repositories import CommentRepository, PostRepository
 from app.repositories.schema import CommentUpdateRepository
