@@ -3,7 +3,7 @@ from fastapi import APIRouter, HTTPException, status
 from app.rest_api import rest_api
 
 from app.rests.schemas import CreateCommentRequest
-from app.businesses.schema import CommentData, UpdateCommentData
+from app.business.schema import CommentData, UpdateCommentData
 
 comment_router = APIRouter(prefix="/comments")
 
