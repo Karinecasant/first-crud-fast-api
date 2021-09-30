@@ -91,7 +91,7 @@
 ### ✒️ Authors
 
 * **Karine Santos** - *Development* - [Karine Santos](https://github.com/Karinecasant)
-* **Enzo Ferrari** - *Development* - [Enzo Ferrari](https://https://github.com/ferrarienz0)
+* **Enzo Ferrari** - *Development* - [Enzo Ferrari](https://github.com/ferrarienz0)
 
 
 ⌨️ com ❤️ por [Karine Santos](https://github.com/Karinecasant) 😊
