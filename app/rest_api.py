@@ -13,6 +13,14 @@ class RestAPI:
     def server(self):
         return self.__server
 
+    @property
+    def comment_repository(self):
+        return self.__comment_repository
+
+    @property
+    def post_repository(self):
+        return self.__post_repository
+
     def __initialize_database(self):
         self.__database = {
             'posts': [],

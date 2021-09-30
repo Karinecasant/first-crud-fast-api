@@ -35,3 +35,6 @@ class CommentRepository:
             comment.content = comment_update.content
 
             return comment
+
+    def clear(self):
+        self._comment_database.clear()

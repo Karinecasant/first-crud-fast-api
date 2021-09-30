@@ -36,4 +36,7 @@ class PostRepository:
 
             return post
     
+    def clear(self):
+        self._post_database.clear()
+    
 
